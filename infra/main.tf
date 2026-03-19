@@ -71,7 +71,7 @@ resource "azuread_service_principal_password" "packer" {
 }
 
 resource "azurerm_role_assignment" "packer_contributor" {
-  scope                = azurerm_resource_group.main.id
+  scope                = "/subscriptions/${data.azurerm_client_config.current.subscription_id}"
   role_definition_name = "Contributor"
   principal_id         = azuread_service_principal.packer.object_id
 }
