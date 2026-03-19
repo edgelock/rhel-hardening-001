@@ -44,7 +44,7 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
           ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-        run: packer validate -var-file=variables.pkrvars.hcl rhel9.pkr.hcl
+        run: packer validate rhel9.pkr.hcl
 
       - name: Packer Build
         working-directory: packer
