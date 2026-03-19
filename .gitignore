@@ -1,0 +1,30 @@
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+.terraform.lock.hcl
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform variable files containing secrets
+*.tfvars
+*.tfvars.json
+
+# Packer variable files containing secrets
+*.pkrvars.hcl
+
+# Packer build artifacts
+packer_cache/
+manifest.json
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
